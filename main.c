@@ -1,6 +1,10 @@
 #include <stdio.h>
 #include <math.h>
 
+void kv(double d, double a,  double b,  double c)
+{
+		
+}
 int main()
 {
     double d, a, b, c, x;
@@ -14,5 +18,7 @@ int main()
     printf ("wedite koeffizient 3\n");
     scanf ("%d", &c);
 
-	d=sqrt(b*b-4*a*c);
+	d = sqrt(b * b - 4 * a * c);
+	
+	kv(d, a, b, c);
 }
