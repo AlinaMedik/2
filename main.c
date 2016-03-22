@@ -7,28 +7,29 @@ void kv(double d, double a,  double b,  double c)
     {
         if (d > 0)
         {
-            printf("x 1 = %d", (-b - d) / 2 * a);
-            printf("x 2 = %d", (-b + d) / 2 * a);
+            printf("x 1 = %lf", (-b - d) / 2 * a);
+            printf("x 2 = %lf", (-b + d) / 2 * a);
         }
 
-        printf("x = %d", (-b / 2 * a);
+        printf("x = %lf", -b / 2 * a);
     }
 
     printf("net recheni");
 	
 }
+
 int main()
 {
-    double d, a, b, c, x;
+    double d, a, b, c;
 
     printf("wedite koeffizient 1\n");
-    scanf("%d", &a);
+    scanf("%lf", &a);
 
     printf("wedite koeffizient 2\n");
-    scanf("%d", &b);
+    scanf("%lf", &b);
 
     printf("wedite koeffizient 3\n");
-    scanf("%d", &c);
+    scanf("%lf", &c);
 
 	d = sqrt(b * b - 4 * a * c);
 	
