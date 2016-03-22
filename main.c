@@ -3,16 +3,16 @@
 
 void kv(double d, double a,  double b,  double c)
 {
-	if (d >= 0)
-    {
-        if (d > 0)
-        {
-            printf("x 1 = %lf", (-b - d) / 2 * a);
-            printf("x 2 = %lf", (-b + d) / 2 * a);
-        }
+	if ((d > 0) && (d == 0))
+	 printf("x = %lf", -b / (2 * a));
 
-        printf("x = %lf", -b / 2 * a);
+	if (d > 0)
+	{
+            printf("x = %lf\n", (-b - d) / 2 * a);
+            printf("x = %lf", (-b + d) / 2 * a);
     }
+
+	if (d<0)
 
     printf("net recheni");
 	
