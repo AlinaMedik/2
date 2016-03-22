@@ -14,4 +14,5 @@ int main()
     printf ("wedite koeffizient 3\n");
     scanf ("%d", &c);
 
+	d=sqrt(b*b-4*a*c);
 }
