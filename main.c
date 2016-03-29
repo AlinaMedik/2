@@ -3,19 +3,17 @@
 
 void kv(double d, double a,  double b,  double c)
 {
-	if ((d > 0) && (d == 0))
-	 printf("x = %lf", -b / (2 * a));
+	if (d == 0)
+		printf("x = %lf", -b / (2 * a));
 
 	if (d > 0)
 	{
-            printf("x = %lf\n", (-b - d) / 2 * a);
-            printf("x = %lf", (-b + d) / 2 * a);
+		printf("x1 = %lf\n", (-b - sqrt(d)) / 2 * a);
+		printf("x2 = %lf", (-b + sqrt(d)) / 2 * a);
     }
 
-	if (d<0)
-
-    printf("net recheni");
-	
+	if (d < 0)
+		printf("net recheni");
 }
 
 int main()
@@ -31,7 +29,9 @@ int main()
     printf("wedite koeffizient 3\n");
     scanf("%lf", &c);
 
-	d = sqrt(b * b - 4 * a * c);
+	d = b * b - 4 * a * c;
 	
 	kv(d, a, b, c);
+	
+	return 0;
 }
