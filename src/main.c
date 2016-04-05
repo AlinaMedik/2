@@ -1,24 +1,10 @@
 #include <stdio.h>
 #include <math.h>
-
-void kv(double d, double a,  double b,  double c)
-{
-	if (d == 0)
-		printf("x = %lf", -b / (2 * a));
-
-	if (d > 0)
-	{
-		printf("x1 = %lf\n", (-b - sqrt(d)) / 2 * a);
-		printf("x2 = %lf", (-b + sqrt(d)) / 2 * a);
-    }
-
-	if (d < 0)
-		printf("net recheni");
-}
+#include "kv.h"
 
 int main()
 {
-    double d, a, b, c;
+    double a, b, c;
 
     printf("wedite koeffizient 1\n");
     scanf("%lf", &a);
@@ -28,10 +14,26 @@ int main()
 
     printf("wedite koeffizient 3\n");
     scanf("%lf", &c);
-
-	d = b * b - 4 * a * c;
+    
+    double x1, x2;
 	
-	kv(d, a, b, c);
+	double result = kv(a, b, c, &x1, &x2);
+	
+	if (result == FOUND_2_ROOT){
+		printf ("x1=%lf\n", x1);
+		printf ("x2=%lf\n", x2);
+	}	
+			
+	if (result == FOUND_1_ROOT)
+        printf ("x1=%lf\n", x1);
+        
+    if (result == ROOT_NOT_FOUND)
+        printf ("ROOT_NOT_FOUND");	
+	
+	 if (result == INVALUD_ARGUMENTS)
+        printf ("INVALUD_ARGUMENTS");
 	
 	return 0;
+	
 }
+
