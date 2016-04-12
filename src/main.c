@@ -17,7 +17,7 @@ int main()
     
     double x1, x2;
 	
-	double result = kv(a, b, c, &x1, &x2);
+	int result = kv(a, b, c, &x1, &x2);
 	
 	if (result == FOUND_2_ROOT){
 		printf ("x1=%lf\n", x1);
@@ -30,7 +30,7 @@ int main()
     if (result == ROOT_NOT_FOUND)
         printf ("ROOT_NOT_FOUND");	
 	
-	 if (result == INVALUD_ARGUMENTS)
+	if (result == INVALUD_ARGUMENTS)
         printf ("INVALUD_ARGUMENTS");
 	
 	return 0;

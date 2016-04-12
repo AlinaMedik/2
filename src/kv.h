@@ -5,6 +5,6 @@
 #define ROOT_NOT_FOUND 0
 #define INVALUD_ARGUMENTS -1
 	
-double kv(double a, double b, double c, double *x1, double *x2);
+int kv(double a, double b, double c, double *x1, double *x2);
 	
 #endif
